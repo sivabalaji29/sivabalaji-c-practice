@@ -1,0 +1,41 @@
+question :
+Write a program to generate the following series - 101, 103, 107, 109….
+
+Sample Input:
+
+8
+
+Sample Output:
+
+101 103 107 109 113 127 131 137
+
+
+
+answer:
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,c,b;
+    cin>>n;
+    for(int i=101;i<150;i++)
+    {
+        for(int j=1;j<=i;j++)
+        {
+           if(i%j==0)
+           {
+               c++;
+           }
+        }
+        if(c<=2)
+        {
+            cout<<i<<" ";
+            b++;
+        }
+        c=0;
+        if (b==n)
+        {
+            break;
+        }
+}}
